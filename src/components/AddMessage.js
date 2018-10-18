@@ -15,7 +15,8 @@ const AddMessage = (props) => {
                         fetch("https://o1mqnq9mj1.execute-api.us-east-1.amazonaws.com/beta/chatbot", {
                             method: "POST",
                             headers: {
-                                'Content-Type' : 'application/json'
+                                'Content-Type' : 'application/json',
+                                'X-Api-Key' : process.env.REACT_APP_CHATBOT_API_KEY
                                 //"Access-Control-Allow-Headers" : "Origin, X-Requested-With, Content-Type, Accept"
                             },
                             body: JSON.stringify(data)
